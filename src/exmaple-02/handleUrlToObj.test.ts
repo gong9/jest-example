@@ -9,8 +9,16 @@ describe("handleUrlToObj", () => {
       b: "2",
     });
   });
+
   it("have &&",()=>{
     window.location.assign("https://www.baidu.com?");    
     expect(handleUrlToObj()).toEqual({});
+  })
+
+  it("have &&",()=>{
+    window.location.assign("https://www.baidu.com?null=null");    
+    expect(handleUrlToObj()).toEqual({
+        null:'null'
+    });
   })
 });
