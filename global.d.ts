@@ -1,1 +1,1 @@
-declare let global: unknown;
+declare let global: any;
